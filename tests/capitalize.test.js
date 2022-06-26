@@ -1,12 +1,15 @@
-
 import { capitalize } from "../src/capitalize.js";
+import { strict as assert } from 'assert';
 
-if (capitalize('') !== '') {
-    throw new Error('Function error!');
-}
+assert.deepEqual(capitalize(''), '');
+assert.deepEqual(capitalize('biba'), 'Biba');
 
-if (capitalize('hello') !== 'Hello') {
-    throw new Error('Функция работает неверно!')
-}
+// if (capitalize('') !== '') {
+//    throw new Error('Function error!');
+// }
+
+// if (capitalize('hello') !== 'Hello') {
+//    throw new Error('Функция работает неверно!')
+// }
 
 console.log('All test passed');
